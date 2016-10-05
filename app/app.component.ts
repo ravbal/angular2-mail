@@ -3,7 +3,8 @@ import {Component,Input} from '@angular/core';
 
 @Component({
 	selector:'app-component',
-	template:'<h1>Email Application</h1>',
+	template:'<h1>My {{title}}</h1>'+
+	'<my-email></my-email>',
 	stylesUrl:['app.componnet.css']
 
 
@@ -12,7 +13,7 @@ import {Component,Input} from '@angular/core';
 
 export class AppComponent{
 
-
+title="Email Application";
 
 }
 

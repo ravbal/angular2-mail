@@ -3,7 +3,7 @@ import {FormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
-
+import {EmailComponent} from './email/email.component'
 
 @NgModule({
 	imports: [
@@ -11,7 +11,8 @@ import {AppComponent} from './app.component';
 		BrowserModule
 	],
 	declarations: [
-		AppComponent
+		AppComponent,
+		EmailComponent
 	],
 	bootstrap: [
 		AppComponent
