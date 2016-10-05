@@ -4,6 +4,9 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
 import {EmailComponent} from './email/email.component'
+import {EmailDetailComponent} from './email-detail/email-detail.component'
+import {EmailService} from './email.service';
+
 
 @NgModule({
 	imports: [
@@ -12,10 +15,14 @@ import {EmailComponent} from './email/email.component'
 	],
 	declarations: [
 		AppComponent,
-		EmailComponent
+		EmailComponent,
+		EmailDetailComponent
 	],
 	bootstrap: [
 		AppComponent
+	],
+	providers:[
+		EmailService
 	]
 
 
