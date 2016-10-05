@@ -1,7 +1,19 @@
 
 <ul class="emails">
-    <li  *ngFor="let email of emails">
-        <span class="badge">{{email.id}}</span>{{email.message}}
+    <li  *ngFor="let email of emails" [class.selected]="email===selectedEmail" (click)="onSelect(email)">
+        <span class="badge">{{email.id}}</span>{{email.subject}}
 
     </li>
 </ul>
+
+
+<div *ngIf="selectedEmail">
+
+
+    <h2>
+        {{selectedEmail.subject }} is your Email Subject
+    </h2>
+    <button (click)="gotoDetail(selectedEmail)">View Content of your Email</button>
+
+
+</div>

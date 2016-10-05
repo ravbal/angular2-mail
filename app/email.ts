@@ -1,4 +1,4 @@
 export class Email{
 	id:number;
-	message:string;
+	subject:string;
 }

@@ -11,6 +11,7 @@ import {Email} from "../email";
 
 export class EmailComponent implements OnInit {
 	emails: Email[];
+	selectedEmail:Email;
 
 	constructor(private emailService: EmailService) {
 	}
@@ -23,6 +24,10 @@ export class EmailComponent implements OnInit {
 	getEmails(): void {
 
 		this.emailService.getEmails().then(emails=>this.emails = emails);
+	}
+	onSelect(email):void{
+		this.selectedEmail=email;
+
 	}
 
 }
