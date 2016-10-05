@@ -1,3 +1,4 @@
-/**
- * Created by Sai on 10/5/16.
- */
+export class Email{
+	id:number;
+	message:string;
+}
