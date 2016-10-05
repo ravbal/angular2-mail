@@ -1,0 +1,20 @@
+.emails{
+    list-style-type: none;
+}
+
+.emails li{
+    cursor:pointer;
+    position:relative;
+    left:0;
+    background-color: #EEE;
+    margin:.35em;
+    padding:0.3em 0;
+    height:1.6em;
+    border-radius: 5px;
+}
+
+.emails li:hover{
+    color: #607D8B;
+    background-color: #DDD;
+    left: .1em;
+}

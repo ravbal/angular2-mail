@@ -1,1 +1,7 @@
-<h2>hey im there too</h2>
+
+<ul class="emails">
+    <li  *ngFor="let email of emails">
+        <span class="badge">{{email.id}}</span>{{email.message}}
+
+    </li>
+</ul>

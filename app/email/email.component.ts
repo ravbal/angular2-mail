@@ -5,7 +5,7 @@ import {Email} from "../email";
 @Component({
 	selector: 'my-email',
 	templateUrl: '/app/email/email.component.html',
-	stylesUrl: ['app/email/email.component.css']
+	styleUrls: ['app/email/email.component.css']
 
 })
 
