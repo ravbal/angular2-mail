@@ -6,12 +6,13 @@ import {AppComponent} from './app.component';
 import {EmailComponent} from './email/email.component'
 import {EmailDetailComponent} from './email-detail/email-detail.component'
 import {EmailService} from './email.service';
-
+import {routing} from './app.routing';
 
 @NgModule({
 	imports: [
 		FormsModule,
-		BrowserModule
+		BrowserModule,
+		routing
 	],
 	declarations: [
 		AppComponent,

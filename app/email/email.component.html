@@ -1,19 +1,27 @@
+<div class="row">
+    <div [ngClass]="{'col-md-6':editMode,'col-md-12':!editMode}">
 
-<ul class="emails">
-    <li  *ngFor="let email of emails" [class.selected]="email===selectedEmail" (click)="onSelect(email)">
-        <span class="badge">{{email.id}}</span>{{email.subject}}
+        <ul class="emails">
+            <li *ngFor="let email of emails" [class.selected]="email===selectedEmail" (click)="onSelect(email)">
+                <span class="badge">{{email.id}}</span>{{email.subject}}
 
-    </li>
-</ul>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="editMode">
+        <my-email-detail></my-email-detail>
 
-
-<div *ngIf="selectedEmail">
-
-
-    <h2>
-        {{selectedEmail.subject }} is your Email Subject
-    </h2>
-    <button (click)="gotoDetail(selectedEmail)">View Content of your Email</button>
-
+    </div>
 
 </div>
+
+<!--<div *ngIf="selectedEmail">-->
+
+
+<!--<h2>-->
+<!--{{selectedEmail.subject }} is your Email Subject-->
+<!--</h2>-->
+<!--<button (click)="gotoDetail(selectedEmail)">View Content of your Email</button>-->
+
+
+<!--</div>-->

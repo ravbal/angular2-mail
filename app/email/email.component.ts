@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {EmailService} from '../email.service'
 import {Email} from "../email";
-
+import {Router} from '@angular/router';
 @Component({
 	selector: 'my-email',
 	templateUrl: '/app/email/email.component.html',
@@ -11,9 +11,11 @@ import {Email} from "../email";
 
 export class EmailComponent implements OnInit {
 	emails: Email[];
-	selectedEmail:Email;
+	selectedEmail: Email;
+	public editMode =false;
 
-	constructor(private emailService: EmailService) {
+	constructor(private emailService: EmailService,
+				private router: Router) {
 	}
 
 	ngOnInit(): void {
@@ -25,9 +27,17 @@ export class EmailComponent implements OnInit {
 
 		this.emailService.getEmails().then(emails=>this.emails = emails);
 	}
-	onSelect(email):void{
-		this.selectedEmail=email;
 
+	onSelect(email): void {
+		this.selectedEmail = email;
+		this.editMode=true;
+
+	}
+
+	gotoDetail(email: Email): void {
+
+		let link = ['\email', email.id];
+		this.router.navigate(link);
 	}
 
 }

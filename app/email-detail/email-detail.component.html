@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div *ngIf="email">
+    <h2>{{email.id}} Details!</h2>
+    <div><label>Id: </label>{{email.id}}</div>
+    <div><label>Subject:</label>
+        <input [(ngModel)]="email.subject" placeholder="message"/>
+    </div>
+</div>

@@ -10,4 +10,11 @@ export class EmailService {
 		return Promise.resolve(EMAILS);
 
 	}
+
+	getEmail(id:number):Promise<Email>{
+		return this.getEmails()
+			.then(emails=>emails.find(emails=>emails.id === id));
+
+	}
+
 }
