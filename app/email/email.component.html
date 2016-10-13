@@ -10,12 +10,12 @@
     </div>
 
     <div class="selectedEmail col-md-6" *ngIf="editMode">
-        <div *ngIf="selectedEmail">
+        <div class="col-md-offset-3"*ngIf="selectedEmail">
 
             <h2>
-                {{selectedEmail.subject}}: Subject
+                {{selectedEmail.subject}}
             </h2>
-            <button class="btn btn-info"(click)="gotoDetail(selectedEmail)">View Details of your mail</button>
+            <button class="col-md-6 btn btn-info"(click)="gotoDetail(selectedEmail)">View Details of your mail</button>
 
         </div>
     </div>

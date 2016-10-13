@@ -30,7 +30,7 @@
 }
 
 .selectedEmail{
-    border:2px solid greenyellow;
+    border:2px solid #ff4500;
     border-radius: 20px;
     width:40%;
     height:70%;
