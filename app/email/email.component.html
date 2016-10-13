@@ -9,13 +9,13 @@
         </ul>
     </div>
 
-    <div class="col-md-6" *ngIf="editMode">
+    <div class="selectedEmail col-md-6" *ngIf="editMode">
         <div *ngIf="selectedEmail">
 
             <h2>
                 {{selectedEmail.subject}}: Subject
             </h2>
-            <button (click)="gotoDetail(selectedEmail)">View  MoreDetails of your mail</button>
+            <button class="btn btn-info"(click)="gotoDetail(selectedEmail)">View Details of your mail</button>
 
         </div>
     </div>

@@ -1,4 +1,4 @@
-<div *ngIf="email">
+<div class="detail" *ngIf="email">
     <h2>{{email.subject}} Details!</h2>
 
     <div><label>Message:</label> {{email.message}}
@@ -6,4 +6,4 @@
     </div>
 </div>
 
-<button (click)="goBack()">Back</button>
+<button class="btn btn-primary"(click)="goBack()">Back</button>
