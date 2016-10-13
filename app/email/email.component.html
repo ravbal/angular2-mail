@@ -1,5 +1,5 @@
 <div class="row">
-    <div [ngClass]="{'col-md-6':editMode,'col-md-12':!editMode}">
+    <div [ngClass]="{'col-md-6': editMode, 'col-md-12':!editMode}">
 
         <ul class="emails">
             <li *ngFor="let email of emails" [class.selected]="email===selectedEmail" (click)="onSelect(email)">
@@ -8,20 +8,17 @@
             </li>
         </ul>
     </div>
-    <div *ngIf="editMode">
-        <my-email-detail></my-email-detail>
 
+    <div class="col-md-6" *ngIf="editMode">
+        <div *ngIf="selectedEmail">
+
+            <h2>
+                {{selectedEmail.subject}}: Subject
+            </h2>
+            <button (click)="gotoDetail(selectedEmail)">View  MoreDetails of your mail</button>
+
+        </div>
     </div>
 
 </div>
 
-<!--<div *ngIf="selectedEmail">-->
-
-
-<!--<h2>-->
-<!--{{selectedEmail.subject }} is your Email Subject-->
-<!--</h2>-->
-<!--<button (click)="gotoDetail(selectedEmail)">View Content of your Email</button>-->
-
-
-<!--</div>-->
