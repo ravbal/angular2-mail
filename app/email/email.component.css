@@ -11,14 +11,20 @@
     position:relative;
     left:0;
     background-color: #EEE;
-    margin:.35em;
-    padding:0.3em 0;
+    margin:.25em;
+    padding:0.1em 0;
     height:1.6em;
-    border-radius: 5px;
+    border-radius: 4px;
 }
 
 .emails li:hover{
     color: #607D8B;
     background-color: #DDD;
     left: .1em;
+}
+
+.emails .badge{
+
+    color:blue;
+    background-color: #00bfff;
 }
