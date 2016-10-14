@@ -13,7 +13,6 @@ import {Email} from '../email';
 
 export class EmailDetailComponent implements OnInit {
 
-	@Input
 	email: Email;
 
 	constructor(private emailService: EmailService,
